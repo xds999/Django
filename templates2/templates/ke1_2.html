@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>课1—2</title>
+{#    <link rel="stylesheet" type="text/css" href="/static/bootstrap3.4/css/bootstrap.min.css">#}
+{#    <script type="text/javascript" src="/static/jquery-3.2.1/jquery-3.2.1.js"></script>#}
+{#    <script type="text/javascript" src="/static/bootstrap3.4/js/bootstrap.min.js"></script>#}
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap3.4/css/bootstrap.min.css' %}">
+    <script type="text/javascript" src="{% static 'jquery-3.2.1/jquery-3.2.1.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap3.4/js/bootstrap.min.js' %}"></script>
+
+</head>
+<body>
+
+    <div>
+      <p>这个是第一个页面，hello world！</p>
+      <span>请输入姓名:</span>
+      <input id="name" name="name" placeholder="输入姓名">
+  </div>
+  <div>
+      <p>导入bootstrap 3 之后发生的变化</p>
+      <div class="input-group">
+          <span>请输入姓名:</span>
+          <input class="form-control" id="name2" name="name2" placeholder="输入姓名">
+      </div>
+  </div>
+
+</body>
+</html>

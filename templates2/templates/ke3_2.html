@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>课3-2</title>
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap-table/dist/bootstrap-table.min.css">
+
+    <script type="text/javascript" src="/static/jquery-3.2.1/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="/static/bootstrap3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/bootstrap-table/dist/bootstrap-table.min.js"></script>
+    <script type="text/javascript" src="/static/bootstrap-table/dist/locale/bootstrap-table-zh-CN.min.js"></script>
+
+
+</head>
+<body>
+     <div class="container">
+         <div id="toolbar" class="btn-group">
+             <button type="button" class="btn btn-success">
+                 <span class="glyphicon glyphicon-plus"></span>新增
+             </button>
+             <button type="button" class="btn btn-info">
+                 <span class="glyphicon glyphicon-pencil"></span>修改
+             </button>
+             <button type="button" class="btn btn-danger">
+                 <span class="glyphicon glyphicon-remove"></span>删除
+             </button>
+
+         </div>
+         <table id="table" class="table-striped"> </table>
+         <div class="btn-group">
+             <button class="btn btn-default">btn-default</button>
+             <button class="btn btn-success">btn-success</button>
+             <button class="btn btn-info">btn-info</button>
+             <button class="btn btn-danger">btn-danger</button>
+             <button class="btn btn-warning">btn-warning</button>
+             <button class="btn btn-lg btn-info">btn-lg</button>
+             <button class="btn btn-sm btn-info">btn-sm</button>
+             <button class="btn btn-xs btn-info">btn-xs</button>
+             <button class="btn btn-link btn-info">btn-xs</button>
+         </div>
+
+     </div>
+</body>
+<script>
+    // table 表格需要加载的数据
+    data = {
+        "total": 3,
+        "rows": [
+            {"id": 1, "name":"张三", "address": "上海市 徐汇区", "email": "222@qq.com"},
+            {"id": 2, "name":"张三", "address": "上海市 闵行区", "email": "222@qq.com"},
+            {"id": 3, "name":"李四", "address": "上海市 松江区", "email": "222@qq.com"},
+        ]
+    }
+    // 定义所以的列显示
+    columns = [
+        {
+            checkbox: true,
+            visible: true
+        },
+        {
+            field: "id",
+            title: "ID"
+        },
+        {
+            field: "name",
+            title: "姓名"
+        },
+        {
+            field: "address",
+            title: "地址"
+        },
+        {
+            title: "操作按钮",
+            formatter: function () {
+                  return '<button class="btn btn-default">btn-default</button>'
+            }
+        },
+    ]
+    $("#table").bootstrapTable({
+        toolbar: "#toolbar",
+        {#data: data,#}
+        url: "/get/table/",
+        method: "get",
+        columns: columns,
+        pagination: true, // 是否分页
+        pageNumber: 1,                      //初始化加载第一页，默认第一页
+        pageSize: 10,                       //每页的记录行数（*）
+        sidePagination: "client",           //分页方式：client客户端分页，server服务端分页（*）
+        pageList: [1, 2, 50, 100, 'All'], //可供选择的每页的行数（*）
+        search: true,                       //是否显示表格搜索
+        showSearchButton: true,             //搜索确定按钮
+    })
+</script>
+</html>

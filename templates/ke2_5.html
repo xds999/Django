@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <!-- 自适配手机屏幕 initial-scale=1 支持缩放 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ke2_1</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap3.4/css/bootstrap.min.css' %}" >
+    <!-- 引入 js jquery必须先引入 -->
+    <script type="text/javascript" src="{% static 'jquery-3.2.1/jquery-3.2.1.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap3.4/js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+        <div class="col-xs-6 col-md-3">..col-xs-6 .col-sm-3
+Resize your viewport or check it out on your phone for an example.</div>
+        <div class="col-xs-6 col-md-3">.col-xs-6 .col-sm-3</div>
+        <div class="clearfix visible-xs-block"></div>
+
+        <!-- Add the extra clearfix for only the required viewport -->
+
+
+        <div class="col-xs-6 col-md-3" >.col-xs-6 .col-sm-3</div>
+        <div class="col-xs-6 col-md-3">.col-xs-6 .col-sm-3</div>
+        <div class="clearfix visible-md-block"></div>
+        <div class="col-xs-6 col-md-3">.col-xs-6 .col-sm-3</div>
+        </div>
+
+    </div>
+
+</body>
+</html>

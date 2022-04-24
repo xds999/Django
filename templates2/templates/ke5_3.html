@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>select 下拉框</title>
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap-select/dist1.12.4/css/bootstrap-select.min.css">
+    <script type="text/javascript" src="/static/jquery-3.2.1/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="/static/bootstrap3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/bootstrap-select/dist1.12.4/js/bootstrap-select.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>2222222</h1>
+        <h2>33333333333</h2>
+        <form class="form-horizontal">
+            <div class="form-group">
+                  <label for="name" class="col-md-2 col-ms-2 col-xs-2 control-label">名称</label>
+                  <div class="col-md-8 col-ms-8 col-xs-8">
+                      <input  id="name" name="name" class="form-control" placeholder="输入名称">
+                  </div>
+            </div>
+
+            <div class="form-group">
+                 <label for="project" class="col-md-2 col-ms-2 col-xs-2 control-label">选择项目</label>
+                 <div class="col-md-8 col-ms-8 col-xs-8">
+                     <select id="project" multiple="multiple" data-max-options="3" data-style="btn-info" title="请选择" data-live-search="true" data-size="8" name="project_name" class="form-control show-tick">
+                         <optgroup label="UI 自动化">
+                             <option data-tokens="web ui" value="1">selenium</option>
+                             <option data-tokens="web ui" value="2">pytest</option>
+                             <option data-tokens="web ui" value="3">cypress</option>
+                             <option data-divider="true"></option>
+                             <option data-tokens="python" value="4">python</option>
+                             <option data-tokens="java" value="5">java</option>
+                         </optgroup>
+
+                         <optgroup label="接口 自动化">
+                             <option data-tokens="web ui" value="6">selenium2</option>
+                             <option data-tokens="web ui" value="7">pytest2</option>
+                             <option data-tokens="web ui" value="8">cypress2</option>
+                             <option data-tokens="python" value="9">python2</option>
+                             <option data-tokens="java" value="10">java2</option>
+                         </optgroup>
+                     </select>
+                     <div class="input-group">
+                         <input type="button" class="btn" id="btn" value="点我">
+                     </div>
+                 </div>
+            </div>
+
+        </form>
+
+    </div>
+
+
+</body>
+<script>
+    // 默认打开选项框
+    $("#project").selectpicker();
+    $('#btn').click(function () {
+        // 点击之后执行事件
+        console.log("sssssssssssssssssss")
+        let a = $('#project').val();
+        console.log(a)
+    })
+</script>
+</html>

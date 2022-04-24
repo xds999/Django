@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>select 下拉框</title>
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap-select/dist1.12.4/css/bootstrap-select.min.css">
+    <script type="text/javascript" src="/static/jquery-3.2.1/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="/static/bootstrap3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/bootstrap-select/dist1.12.4/js/bootstrap-select.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>111</h1>
+        <h2>3333</h2>
+        <div id='me' class="dropdown">
+            <button  class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                下拉菜单
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li class="dropdown-header">分组1</li>
+                <li><a href="#a1">这是第一个</a></li>
+                <li><a href="#a2">这是第2个</a></li>
+                <li><a href="#a3">这是第3个</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">分组2</li>
+                <li class="disabled"><a href="#">这是第3个</a></li>
+            </ul>
+        </div>
+        <div id="a1" style="height: 600px" class="bg-warning">
+            第一屏
+        </div>
+        <div id="a2" style="height: 600px"  class="bg-info">
+            第二屏
+        </div>
+        <div id="a3" style="height: 600px"  class="bg-danger">
+            第三屏
+        </div>
+
+    </div>
+
+</body>
+<script>
+ {#$('.dropdown-menu').dropdown('toggle')#}
+
+$('#me').on('hidden.bs.dropdown', function () {
+    // 监听后执行的内容
+    alert("aaaaaaaaaaaa111111")
+})
+
+</script>
+</html>

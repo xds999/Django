@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+{#    <meta name="viewport" content="width=device-width, initial-scale=1">#}
     <title>表格优化</title>
     <link rel="stylesheet" type="text/css" href="/static/bootstrap-3.4/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/static/bootstrap-table-master/dist/bootstrap-table.min.css">
@@ -32,7 +32,7 @@
 <script>
     // 需加载的数据
     data = {
-        "total": 11,
+        "total": 12,
         "rows": [
             {"id": 1, "name": "xds", "address": "深圳市福田区", 'age': 18},
             {"id": 2, "name": "xds", "address": "深圳市南山区", 'age': 22},
@@ -87,7 +87,6 @@
         method: 'get',
         search: true, // 增加搜素框
         pagination: true, // 是否显示分页
-
     })
 </script>
 </html>
